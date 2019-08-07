@@ -10,25 +10,25 @@ mongoose.connect(
 
 const recycleSeed = [{
         bussinessName: "Star Recycling",
-        adress: "123 Varick Ave Williamsburg in Brooklyn, NY ",
+        address: "123 Varick Ave Williamsburg in Brooklyn, NY ",
         synopsis: "Wholesale Recycling Depots.",
         date: new Date(Date.now())
     },
     {
         bussinessName: "Saga Recycling",
-        adress: "1305 67th St Dyker Heights in Brooklyn, NY",
+        address: "1305 67th St Dyker Heights in Brooklyn, NY",
         synopsis: "Wholesale Recycling Depots.",
         date: new Date(Date.now())
     },
     {
         bussinessName: "Metropolitan Paper Recycling",
-        adress: "847 Shepherd Ave East New York in Brooklyn, NY",
+        address: "847 Shepherd Ave East New York in Brooklyn, NY",
         synopsis: "Wholesale Recycling Depots.",
         date: new Date(Date.now())
     },
     {
         bussinessName: "Boro-Wide Recycling Corporation",
-        adress: "3 Railroad Pl Maspeth in Queens, NY ",
+        address: "3 Railroad Pl Maspeth in Queens, NY ",
         synopsis: "Business Consultants, Street Cleaning Equipment Manufacturers, Home & Garden.",
         date: new Date(Date.now())
     }

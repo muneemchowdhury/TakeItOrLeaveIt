@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const recycleSchema = new Schema({
     bussinessName: { type: String, required: true },
-    adress: { type: String, required: true },
+    address: { type: String, required: true },
     synopsis: String,
     date: { type: Date, default: Date.now }
 });
