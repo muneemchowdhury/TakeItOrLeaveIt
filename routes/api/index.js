@@ -1,7 +1,10 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+//const router2 = require("express").Router();
+const recycleRoutes = require("./recycle");
+//const itemRoutes = require("./item")
 
-// Book routes
-router.use("/books", bookRoutes);
+//  routes
+router.use("/recycle", recycleRoutes);
+//router2.use("/item", itemRoutes)
 
 module.exports = router;
