@@ -1,11 +1,16 @@
 import React from "react";
-import "./style.css";
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
-        Take it or Leave it!
+       Home
+      </a>
+      <a className="navbar-brand" href="/recycle">
+       Leave It
+      </a>
+      <a className="navbar-brand" href="/item">
+       Take It
       </a>
     </nav>
   );

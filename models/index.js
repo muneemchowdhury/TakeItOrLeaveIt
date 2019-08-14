@@ -1,3 +1,4 @@
 module.exports = {
-  Book: require("./book")
+    Recycle: require("./recycle"),
+    Item: require("./item")
 };
