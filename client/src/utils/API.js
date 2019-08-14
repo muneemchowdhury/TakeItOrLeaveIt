@@ -7,7 +7,9 @@ export default {
     },
     // Gets the item with the given id
     getItem: function(id) {
+        
         return axios.get("/api/item/" + id);
+
     },
     // Deletes the item with the given id
     deleteItem: function(id) {
@@ -18,10 +20,10 @@ export default {
         return axios.post("/api/item", itemData);
     },
     getRecycles: function() {
-        return axios.get("api/recycle")
+        return axios.get("/api/recycle")
     },
     getRecycle: function(id) {
-        return axios.get("/api/item/" + id)
+        return axios.get("/api/recycle/" + id)
     },
     deleteRecycle: function(id) {
         return axios.delete("api/recycle" + id)

@@ -5,25 +5,49 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
 class Recycle extends Component {
+  
   state = {
-  recycle: {}
+  recycles:[] 
+  
+  
+
   };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-  componentDidMount() {
-    API.getRecycle(this.props.match.params.id)
-      .then(res => this.setState({ recycle: res.data }))
-      .catch(err => console.log(err));
-  }
+  
+ 
+  componentDidMount() {this.loadRecycles()}
+   
+   //API.getRecycles().then(res=>console.log(res.data))
+  // .then 
+   
+   //.then(res => this.setState({ recycles: res.data}))
+     // .then(console.log(this.state))
+     // .catch(err => console.log(err));
+      
+  
+  loadRecycles = () => {
+    API.getRecycles()
+  //.then(res=>console.log(res.data))
+  
+  .then(res=>
+     this.setState({recycles: res.data,})
+  )
+.then(res=>console.log(this.state))
+  .catch(err => console.log(err));
+    };
+
+
+    
 
   render() {
+    
     return (
       <Container fluid>
         <Row>
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.recycle.bussinessName} by {this.state.recycle.address}
+                Leave Your Item at the Recycling Center
+                
               </h1>
             </Jumbotron>
           </Col>
@@ -31,9 +55,14 @@ class Recycle extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h1>All Available Locations</h1>
               <p>
-                {this.state.recycle.synopsis}
+              {this.state.recycles.map(item => (
+                <div>
+                <h2>{item.bussinessName}</h2>
+               <h3>{item.address}</h3> 
+                <i>{item.synopsis}</i>
+                </div>))}
               </p>
             </article>
           </Col>
@@ -47,5 +76,5 @@ class Recycle extends Component {
     );
   }
 }
+export default Recycle
 
-export default Recycle;

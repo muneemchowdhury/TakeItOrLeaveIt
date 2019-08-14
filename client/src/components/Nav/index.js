@@ -4,7 +4,13 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
-        React Reading List
+       Home
+      </a>
+      <a className="navbar-brand" href="/recycle">
+       Leave It
+      </a>
+      <a className="navbar-brand" href="/item">
+       Take It
       </a>
     </nav>
   );
